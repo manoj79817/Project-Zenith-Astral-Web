@@ -1,15 +1,14 @@
-# 🌌 Project Zenith — The Celestial Eye
+#  Project Zenith — The Celestial Eye
 
 A real-time cosmic radar web application that shows you what's directly above any location on Earth. Track the ISS, active satellites, the Moon, planets, and constellations in real time.
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 /frontend  → Next.js 16 (App Router) + TypeScript + Tailwind CSS + Framer Motion
 /backend   → Express + TypeScript + Socket.IO + Mongoose
 ```
 
-## 🚀 Quick Start
 
 ### Prerequisites
 - Node.js 18+
@@ -39,7 +38,7 @@ npm run dev
 - **Backend API**: http://localhost:4000
 - **Health Check**: http://localhost:4000/api/health
 
-## 🔑 Environment Variables
+##  Environment Variables
 
 ### Backend (`backend/.env`)
 | Variable | Description | Required |
@@ -69,4 +68,3 @@ npm run dev
 - **External APIs**: OpenNotify (ISS), CelesTrak (TLEs), NASA Horizons
 
 ---
-*Built with ❤️ for the cosmos*
