@@ -134,8 +134,8 @@ function calculateSatellitePositions(
       const positionEcf = satellite.eciToEcf(positionEci, gmst);
       const lookAngles = satellite.ecfToLookAngles(observerGd, positionEcf);
 
-      const elevationDeg = satellite.radiansToDegrees(lookAngles.elevation);
-      const azimuthDeg = satellite.radiansToDegrees(lookAngles.azimuth);
+      const elevationDeg = (lookAngles.elevation * 180) / Math.PI;
+      const azimuthDeg = (lookAngles.azimuth * 180) / Math.PI;
 
       if (elevationDeg >= minElevation) {
         let speed: number | undefined;
