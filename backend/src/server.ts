@@ -16,15 +16,26 @@ import satelliteRoutes from './routes/satellites';
 const app = express();
 const server = http.createServer(app);
 
+const allowedOrigins = [
+  'http://localhost:3000',
+  'https://project-zenith-astral-web.vercel.app',
+  process.env.FRONTEND_URL || ''
+].filter(Boolean);
+
 const io = new SocketIOServer(server, {
   cors: {
-    origin: config.corsOrigin,
+    origin: allowedOrigins,
     methods: ['GET', 'POST'],
+    credentials: true
   },
 });
 
 // Middleware
-app.use(cors({ origin: config.corsOrigin }));
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
+}));
 app.use(express.json());
 
 // Health check
