@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // no webpack override needed for turbopack
+  turbopack: {
+    root: __dirname,
+  },
 };
 
 export default nextConfig;

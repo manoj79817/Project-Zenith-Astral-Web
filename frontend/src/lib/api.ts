@@ -1,4 +1,6 @@
-const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:4000';
+const BACKEND_URL =
+  process.env.NEXT_PUBLIC_BACKEND_URL ||
+  'https://project-zenith-astral-web.onrender.com';
 
 export async function apiFetch<T>(
   endpoint: string,

@@ -4,7 +4,9 @@ import { useEffect, useRef, useCallback, useState } from 'react';
 import { io, Socket } from 'socket.io-client';
 import { ZenithUpdate } from '@/types';
 
-const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:4000';
+const BACKEND_URL =
+  process.env.NEXT_PUBLIC_BACKEND_URL ||
+  'https://project-zenith-astral-web.onrender.com';
 
 export function useSocket() {
   const socketRef = useRef<Socket | null>(null);
